@@ -16,7 +16,7 @@ const Profile = () => {
             setLoading(true);
             setError(null);
 
-            const response = await API.get('/profiles');
+            const response = await API.get('/admin/profiles');
             const result = response.data;
             console.log(result)
             if (result.status === 'success') {
