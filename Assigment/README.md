@@ -11,39 +11,47 @@ This project is a modern React-based dashboard application with user management,
 
 ## 📁 Folder Structure
 
-```
-
 src/
-├── Context/               # App-wide context (Auth, App state)
+├── Context/
 │   └── Auth/
-│       └── ProtectedRoute.jsx
+│       └── ProtectedRoute.jsx     # HOC for guarding private routes using auth context
+│
 ├── lib/
-│   └── utils.js           # Utility functions
-├── Page/                  # Page-level components
+│   └── utils.js                   # Shared helper functions (e.g., formatting, constants)
+│
+├── Page/                          # All major pages and page-level components
 │   ├── ConnectionsPage/
-│   │   └── ConnectionsTable.jsx
-│   ├── Dashboard\_Page/
-│   │   └── Dashboard.jsx
-│   ├── Institutions\_Page/
-│   │   └── Institutions.jsx
+│   │   └── ConnectionsTable.jsx   # Displays and manages user connections
+│   │
+│   ├── Dashboard_Page/
+│   │   └── Dashboard.jsx          # Main dashboard view with KPIs/widgets
+│   │
+│   ├── Institutions_Page/
+│   │   └── Institutions.jsx       # Institution filtering/search management
+│   │
 │   ├── Layout/
-│   │   └── Layout.jsx
+│   │   └── Layout.jsx             # Core layout (e.g., header/sidebar wrapper)
+│   │
 │   ├── LoginPage/
-│   │   └── LoginPage.jsx
+│   │   └── LoginPage.jsx          # Authentication/login screen
+│   │
 │   ├── ProfilePage/
-│   │   └── Profile.jsx
-│   ├── Sidebar\_Page/
-│   │   └── Sidebar.jsx
+│   │   └── Profile.jsx            # User profile display/edit
+│   │
+│   ├── Sidebar_Page/
+│   │   └── Sidebar.jsx            # Sidebar navigation component
+│   │
 │   └── UserManagementTable/
-│       └── User\_Page.jsx
+│       └── User_Page.jsx          # Table to manage users (view/edit/delete)
+│
 ├── utils/
-│   └── api.js             # API functions
-├── App.jsx                # Root component
-├── main.jsx               # Entry point
-├── index.css              # Global styles
-└── App.css                # App-specific styles
+│   └── api.js                     # Centralized API calls and endpoint definitions
+│
+├── App.jsx                        # Root React component, sets up routes/layout
+├── main.jsx                       # App entry point – renders App into DOM
+├── App.css                        # Global styles specific to App
+├── index.css                      # Tailwind/global resets
 
-````
 
 ---
 
